@@ -1,0 +1,256 @@
+/*reset*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section { display: block }
+
+body {
+  line-height: 0.9;
+  font-family: 'roboto', sans-serif;
+  font-size: 15px /*I changed this, it'll change the text size that you actually want to change*/
+}
+
+ol,
+ul { list-style: none }
+
+blockquote,
+q { quotes: none }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after { content: none }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+/*layout*/
+
+.trapped {
+	   display: block;
+    margin: 0 auto;
+	width:600px;
+	max-width: 100%;
+	margin-top: 10px
+}
+.wrapper {
+  width: 600px;
+  margin: 10px auto
+}
+
+.trapper {
+  width: 300px;
+  margin: 20px auto
+}
+
+.trappers {
+  width: 200px;
+  margin: 20px auto
+}
+
+a {
+  color: #00d;
+  text-decoration: none
+}
+
+a:hover { color: #00f }
+
+.separator {
+  text-align: center;
+  padding: 10px
+}
+
+.header { min-height: 100px }
+
+h1 { font-size: 20px }
+
+h2 { font-size: 10px }
+
+h3 { font-size: 10px }
+
+h1,
+h2,
+h3 {
+  letter-spacing: -1px;
+  margin: 0 0 .6em
+}
+
+p { margin-bottom: 10px }
+
+.header,
+.footer,
+.heading {
+  background: none repeat scroll 0 0 #F9f9f9;
+  border: 1px dotted #CCC;
+  margin: 140px 0;
+  padding: 10px
+}
+
+.footer { text-align: center }
+
+.quickLinks {
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 20px
+}
+
+.footer h3 { margin: 0 }
+
+/*drilldown styles*/
+
+.l_drillDownWrapper {
+  overflow: hidden;
+  position: relative;
+  background: none repeat scroll 0 0 #F9F9F9;
+  border: 1px dotted #CCC
+  /* ^ This seperates the lines with the little dots. I quite like them but it can be changed to something more defined or even removed */
+}
+
+.l_drillDown {
+  list-style: none outside none;
+  position: relative;
+  overflow: visible;
+  margin: 0
+}
+
+.l_drillDown ul {
+  display: none;
+  left: 100%;
+  list-style: none outside none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin: 0
+}
+
+.l_drillDown li {
+  border-bottom: 1px dotted #CCC;
+  cursor: pointer;
+  display: block;
+  padding: 0
+}
+/*This drilldown. hasSubs thing is placing the  > image in front of the tabs that have sub tabs beneath them. I might change it to be more subway themed. */
+.l_drillDown li.hasSubs { background: url(drilldown_arrow.png) no-repeat scroll right center transparent }
+
+.l_drillDown li:last-child { border: medium none }
+
+.l_drillDown a {
+  display: block;
+  padding: 9px
+}
+
+.l_ddbc {
+  background: none repeat scroll 0 0 #F3F3F3;
+  border-bottom: 1px dotted #CCC;
+  font-size: 10px;
+  font-weight: 700;
+  display: none;
+  padding: 4px 9px
+}
+
+.l_drillDown ul.active,
+.l_drillDown ul.displayed { display: block }
+/*This "b" thing is a work around because the lines were soooo squashed when it wasn't in here. Maybe the rest of the stylesheet wasn't recognising it. */
+ul.b {
+     line-height: 2.9;
+	 word-spacing: 20px;
+}
